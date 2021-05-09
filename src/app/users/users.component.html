@@ -1,0 +1,116 @@
+<div class="mb-2">
+  <ngx-datatable
+    class="bootstrap datatable w-100"
+    [rows]="users"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="0"
+    [rowHeight]="50"
+    [scrollbarH]="true"
+  >
+    <ngx-datatable-column name="ID" [width]="25" [sortable]="true">
+      <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+        <span class="datatable-header-cell-wrapper">
+          <span class="datatable-header-cell-label draggable" (click)="sort()">
+            {{column.name}}
+          </span>
+        </span>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        {{row.id}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Name" [sortable]="true">
+      <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+        <span class="datatable-header-cell-wrapper">
+          <span class="datatable-header-cell-label draggable" (click)="sort()">
+            {{column.name}}
+          </span>
+        </span>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        {{row.name}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Username" [sortable]="true">
+      <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+        <span class="datatable-header-cell-wrapper">
+          <span class="datatable-header-cell-label draggable" (click)="sort()">
+            {{column.name}}
+          </span>
+        </span>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        {{row.username}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Address" [sortable]="true">
+      <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+        <span class="datatable-header-cell-wrapper">
+          <span class="datatable-header-cell-label draggable" (click)="sort()">
+            Street
+          </span>
+          |
+          <span class="datatable-header-cell-label draggable" (click)="sort()">
+            Suite
+          </span>
+        </span>
+      </ng-template>
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        {{row.address.street}}
+      </ng-template>
+    </ngx-datatable-column>
+    <!--
+    <ngx-datatable-column name="Company Catchphrase" [sortable]="true">
+      <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+        <span class="datatable-header-cell-wrapper">
+          <span class="datatable-header-cell-label draggable" (click)="sort()">
+            {{column.name}}
+          </span>
+        </span>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        {{row.company.catchPhrase}}
+      </ng-template>
+    </ngx-datatable-column>
+    -->
+    <ngx-datatable-column name="Catchphrase" [sortable]="true">
+      <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+        <span class="datatable-header-cell-wrapper">
+          <span class="datatable-header-cell-label draggable" (click)="sort()">
+            Catchphrase
+          </span> |
+          <span class="datatable-header-cell-label draggable" (click)="sort()">
+            BS
+          </span>
+        </span>
+      </ng-template>
+      <ng-template let-row="row" let-value="value"ngx-datatable-cell-template>
+        {{row.company.catchPhrase}}
+      </ng-template>
+    </ngx-datatable-column>
+    <!--
+    <ngx-datatable-column
+      name="Username"
+      prop="username"
+      [cellClass]="'d-none'">
+    </ngx-datatable-column>
+    -->
+    <!--
+    <ngx-datatable-column name="ID" [flexGrow]="1">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Name" prop="name" [flexGrow]="2">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Username" prop="username" [flexGrow]="2">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Email" prop="email" [flexGrow]="2">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Website" prop="website" [flexGrow]="2">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Catchphrase" prop="address.catchphrase" [flexGrow]="2">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="BS" prop="address.bs" [flexGrow]="2">
+    </ngx-datatable-column>
+  -->
+  </ngx-datatable>
+</div>

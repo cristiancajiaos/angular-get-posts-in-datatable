@@ -1,0 +1,24 @@
+<div class="mb-2">
+  <ngx-datatable
+  class="bootstrap datatable w-100"
+  [rows]="comments"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="0"
+  [rowHeight]="50"
+  [loadingIndicator]="true"
+  [scrollbarH]="true"
+  [scrollbarH]="true"
+  >
+    <ngx-datatable-column name="Post ID" prop="postId" [width]="50">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="ID" prop="id" [width]="50">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Name" prop="name" [width]="200">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Email" prop="email" [width]="200">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Body" prop="body" [width]="500">
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>
